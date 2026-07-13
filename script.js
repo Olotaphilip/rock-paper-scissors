@@ -18,3 +18,10 @@ function getcomputerchoice() {
 }
 console.log(getcomputerchoice())
 
+function gethumanchoice() {
+    let humanchoice = prompt('Rock, Paper or Scissors?')
+    return humanchoice
+}
+
+console.log(gethumanchoice())
+
