@@ -16,15 +16,63 @@ function getcomputerchoice() {
        break;
     }  
 }
-console.log(getcomputerchoice())
+
 
 function gethumanchoice() {
     let humanchoice = prompt('Rock, Paper or Scissors?')
     return humanchoice
 }
 
-console.log(gethumanchoice())
 
 let computerscore = 0
 let humanscore = 0
+
+function playround(humanchoice, computerchoice) {
+
+   if (humanchoice === 'paper' && computerchoice === 'rock') {
+      console.log('you win, paper covers rock')
+      ++humanscore
+   }  else if (humanchoice === 'rock' && computerchoice === 'paper') {
+      console.log('you win, paper covers rock')
+      ++computerscore
+   }  else if (humanchoice === 'scissors' && computerchoice === 'paper') {
+      console.log('you win, scissors cuts paper')
+      ++humanscore
+   }  else if (humanchoice === 'paper' && computerchoice === 'scissors') {
+      console.log('you lose, scissors cuts paper')
+      ++computerscore
+   }  else if (humanchoice === 'rock' && computerchoice === 'scissors') {
+      console.log('you win, rock crushes scissors')
+      ++humanscore
+   }  else if (humanchoice === 'scissors' && computerchoice === 'rock') {
+      console.log('you lose, rock crushes scissors')
+      ++computerscore
+   }  else if (humanchoice === 'rock' && computerchoice === 'rock') {
+      console.log('yap!, no winner here')
+   }  else if (humanchoice === 'scissors' && computerchoice === 'scissors') {
+      console.log('yap!, no winner here')
+   }  else if (humanchoice === 'paper' && computerchoice === 'paper') {
+      console.log('yap!, no winner here')
+   } 
+    
+
+
+}
+
+
+
+
+const humanpick = gethumanchoice()
+const computerpick = getcomputerchoice()
+
+playround(humanpick, computerpick)
+
+ console.log(humanscore)
+ console.log(computerscore)
+ console.log(humanpick)
+ console.log(computerpick)
+
+ function playgame() {
+ 
+ }
 
