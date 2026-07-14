@@ -55,7 +55,7 @@ function playround(humanchoice, computerchoice) {
       console.log('yap!, no winner here')
    } 
     
-
+console.log(humanchoice)
 
 }
 
@@ -64,13 +64,16 @@ function playround(humanchoice, computerchoice) {
 
 const humanpick = gethumanchoice()
 const computerpick = getcomputerchoice()
+ 
+let humanpicklowercase = humanpick.toLowerCase()
 
-playround(humanpick, computerpick)
+playround(humanpicklowercase, computerpick)
 
  console.log(humanscore)
  console.log(computerscore)
- console.log(humanpick)
+ console.log(humanpicklowercase)
  console.log(computerpick)
+ 
 
  function playgame() {
  
