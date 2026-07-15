@@ -31,22 +31,40 @@ function playround(humanchoice, computerchoice) {
 
    if (humanchoice === 'paper' && computerchoice === 'rock') {
       console.log('you win, paper covers rock')
-      ++humanscore
+      humanscore = Number(localStorage.getItem('localhumanscore'))
+
+      localStorage.setItem('localhumanscore', ++humanscore)
+
    }  else if (humanchoice === 'rock' && computerchoice === 'paper') {
-      console.log('you win, paper covers rock')
-      ++computerscore
+      console.log('you lose, paper covers rock')
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
+
+      localStorage.setItem('localcomputerscore', ++computerscore)
+
    }  else if (humanchoice === 'scissors' && computerchoice === 'paper') {
       console.log('you win, scissors cuts paper')
-      ++humanscore
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
+
+      localStorage.setItem('localhumanscore', ++humanscore)
+
    }  else if (humanchoice === 'paper' && computerchoice === 'scissors') {
       console.log('you lose, scissors cuts paper')
-      ++computerscore
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
+
+      localStorage.setItem('localcomputerscore', ++computerscore)
+
    }  else if (humanchoice === 'rock' && computerchoice === 'scissors') {
       console.log('you win, rock crushes scissors')
-      ++humanscore
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
+
+      localStorage.setItem('localhumanscore', ++humanscore)
+
    }  else if (humanchoice === 'scissors' && computerchoice === 'rock') {
       console.log('you lose, rock crushes scissors')
-      ++computerscore
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
+
+      localStorage.setItem('localcomputerscore', ++computerscore)
+
    }  else if (humanchoice === 'rock' && computerchoice === 'rock') {
       console.log('yap!, no winner here')
    }  else if (humanchoice === 'scissors' && computerchoice === 'scissors') {
@@ -60,13 +78,10 @@ console.log(humanchoice)
 }
 
 
-
-
 const humanpick = gethumanchoice()
 const computerpick = getcomputerchoice()
  
 let humanpicklowercase = humanpick.toLowerCase()
-
 playround(humanpicklowercase, computerpick)
 
  console.log(humanscore)
@@ -74,8 +89,4 @@ playround(humanpicklowercase, computerpick)
  console.log(humanpicklowercase)
  console.log(computerpick)
  
-
- function playgame() {
- 
- }
 
