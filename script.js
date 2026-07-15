@@ -31,39 +31,51 @@ function playround(humanchoice, computerchoice) {
 
    if (humanchoice === 'paper' && computerchoice === 'rock') {
       console.log('you win, paper covers rock')
-      humanscore = Number(localStorage.getItem('localhumanscore'))
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
 
       localStorage.setItem('localhumanscore', ++humanscore)
+      localStorage.setItem('localcomputerscore', computerscore + 0)
 
    }  else if (humanchoice === 'rock' && computerchoice === 'paper') {
       console.log('you lose, paper covers rock')
       computerscore = Number(localStorage.getItem('localcomputerscore'))
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
 
       localStorage.setItem('localcomputerscore', ++computerscore)
+      localStorage.setItem('localhumanscore', humanscore + 0)
 
    }  else if (humanchoice === 'scissors' && computerchoice === 'paper') {
       console.log('you win, scissors cuts paper')
       humanscore =  Number(localStorage.getItem('localhumanscore'))
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
 
       localStorage.setItem('localhumanscore', ++humanscore)
+      localStorage.setItem('localcomputerscore', computerscore + 0)
 
    }  else if (humanchoice === 'paper' && computerchoice === 'scissors') {
       console.log('you lose, scissors cuts paper')
       computerscore = Number(localStorage.getItem('localcomputerscore'))
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
 
       localStorage.setItem('localcomputerscore', ++computerscore)
+      localStorage.setItem('localhumanscore', humanscore + 0)
 
    }  else if (humanchoice === 'rock' && computerchoice === 'scissors') {
       console.log('you win, rock crushes scissors')
       humanscore =  Number(localStorage.getItem('localhumanscore'))
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
 
       localStorage.setItem('localhumanscore', ++humanscore)
+      localStorage.setItem('localcomputerscore', computerscore + 0)
 
    }  else if (humanchoice === 'scissors' && computerchoice === 'rock') {
       console.log('you lose, rock crushes scissors')
       computerscore = Number(localStorage.getItem('localcomputerscore'))
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
 
       localStorage.setItem('localcomputerscore', ++computerscore)
+      localStorage.setItem('localhumanscore', humanscore + 0)
 
    }  else if (humanchoice === 'rock' && computerchoice === 'rock') {
       console.log('yap!, no winner here')
