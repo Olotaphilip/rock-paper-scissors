@@ -67,10 +67,28 @@ function playround(humanchoice, computerchoice) {
 
    }  else if (humanchoice === 'rock' && computerchoice === 'rock') {
       console.log('yap!, no winner here')
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
+
+      localStorage.setItem('localhumanscore', humanscore + 0)
+      localStorage.setItem('localcomputerscore', computerscore + 0)
+
    }  else if (humanchoice === 'scissors' && computerchoice === 'scissors') {
       console.log('yap!, no winner here')
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
+
+      localStorage.setItem('localhumanscore', humanscore + 0)
+      localStorage.setItem('localcomputerscore', computerscore + 0)
+
    }  else if (humanchoice === 'paper' && computerchoice === 'paper') {
       console.log('yap!, no winner here')
+      humanscore =  Number(localStorage.getItem('localhumanscore'))
+      computerscore = Number(localStorage.getItem('localcomputerscore'))
+
+      localStorage.setItem('localhumanscore', humanscore + 0)
+      localStorage.setItem('localcomputerscore', computerscore + 0)
+
    } 
     
 console.log(humanchoice)
