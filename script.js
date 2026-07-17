@@ -26,6 +26,11 @@ function gethumanchoice() {
 
 let computerscore = 0
 let humanscore = 0
+let totalgamescore = 0 
+
+ 
+ playgame()
+ 
 
 function playround(humanchoice, computerchoice) {
 
@@ -104,19 +109,62 @@ function playround(humanchoice, computerchoice) {
    } 
     
 console.log(humanchoice)
+console.log(computerchoice)
 
 }
-
-
-const humanpick = gethumanchoice()
-const computerpick = getcomputerchoice()
  
-let humanpicklowercase = humanpick.toLowerCase()
-playround(humanpicklowercase, computerpick)
-
  console.log(humanscore)
  console.log(computerscore)
- console.log(humanpicklowercase)
- console.log(computerpick)
  
+ function playgame() {
+     playround(gethumanchoice().toLowerCase(), getcomputerchoice())
+      totalgamescore = Number(localStorage.getItem('localtotalgamescore'))
+      
+      localStorage.setItem('localtotalgamescore', ++totalgamescore)
+      if (totalgamescore == 5) {
+         localStorage.setItem('localtotalgamescore', 0)
+      }
+    console.log(totalgamescore)
+
+     playround(gethumanchoice().toLowerCase(), getcomputerchoice())
+      totalgamescore = Number(localStorage.getItem('localtotalgamescore'))
+      
+      localStorage.setItem('localtotalgamescore', ++totalgamescore)
+      if (totalgamescore == 5) {
+         localStorage.setItem('localtotalgamescore', 0)
+      }
+    console.log(totalgamescore)
+
+     playround(gethumanchoice().toLowerCase(), getcomputerchoice())
+      totalgamescore = Number(localStorage.getItem('localtotalgamescore'))
+      
+      localStorage.setItem('localtotalgamescore', ++totalgamescore)
+      if (totalgamescore == 5) {
+         localStorage.setItem('localtotalgamescore', 0)
+      }
+    console.log(totalgamescore)
+
+     playround(gethumanchoice().toLowerCase(), getcomputerchoice())
+      totalgamescore = Number(localStorage.getItem('localtotalgamescore'))
+      
+      localStorage.setItem('localtotalgamescore', ++totalgamescore)
+      if (totalgamescore == 5) {
+         localStorage.setItem('localtotalgamescore', 0)
+      }
+    console.log(totalgamescore)
+
+     playround(gethumanchoice().toLowerCase(), getcomputerchoice())
+      totalgamescore = Number(localStorage.getItem('localtotalgamescore'))
+      
+      localStorage.setItem('localtotalgamescore', ++totalgamescore)
+      if (totalgamescore == 5) {
+         localStorage.setItem('localtotalgamescore', 0)
+      }
+    console.log(totalgamescore)
+ }
+
+console.log(totalgamescore)
+
+
+
 
