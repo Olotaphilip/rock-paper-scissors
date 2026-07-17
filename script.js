@@ -161,9 +161,16 @@ console.log(computerchoice)
          localStorage.setItem('localtotalgamescore', 0)
       }
     console.log(totalgamescore)
- }
 
-console.log(totalgamescore)
+
+     if (humanscore > computerscore) {
+      console.log('Nice one! You won the game!!')
+     } else if (computerscore > humanscore) {
+      console.log('Ouch! Computer won the game')
+     } else if (humanscore === computerscore) {
+      console.log('No winner! It\'s a tie')
+     }
+ }
 
 
 
