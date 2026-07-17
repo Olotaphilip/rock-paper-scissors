@@ -1,3 +1,5 @@
+// The function below sets and gets a computer random choice  //
+
 function getcomputerchoice() {
 
     let computerchoice = Math.floor(Math.random() * 3 + 1)
@@ -31,6 +33,7 @@ let totalgamescore = 0
  
  playgame()
  
+// the function below plays one round of the game & increases the score of the winner //
 
 function playround(humanchoice, computerchoice) {
 
@@ -116,6 +119,8 @@ console.log(computerchoice)
  console.log(humanscore)
  console.log(computerscore)
  
+ // the function below plays the game in five rounds, announces the winner and reset the score var to 0 //
+
  function playgame() {
      playround(gethumanchoice().toLowerCase(), getcomputerchoice())
       totalgamescore = Number(localStorage.getItem('localtotalgamescore'))
