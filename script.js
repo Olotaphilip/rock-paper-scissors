@@ -170,6 +170,11 @@ console.log(computerchoice)
      } else if (humanscore === computerscore) {
       console.log('No winner! It\'s a tie')
      }
+
+     if (totalgamescore === 5) {
+          localStorage.setItem('localhumanscore', 0)
+          localStorage.setItem('localcomputerscore', 0)
+      }
  }
 
 
